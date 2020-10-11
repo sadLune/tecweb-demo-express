@@ -14,4 +14,7 @@ server.use(bodyParser.json())
 
 server.listen(port, () => { console.log(`BACKEND is running on port ${port}.` )})
 
-require('./routes')(server)
+require('./config/mongodb')
+require('./config/mysql')
+require('./config/routes')(server)
+
